@@ -29,6 +29,8 @@ class GenBar extends CI_Controller {
 				$id=$this->input->post('id');
 				$this->load->model('GenBar_model');
 				$car = $this->GenBar_model->getShow_query($id);
+				// var_dump($car);
+				// die();
 				if($car->num_rows()>0){
 					foreach($car->result() as $row){
 						$shows = array('id_karyawan'=>$row->id_karyawan,

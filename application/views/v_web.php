@@ -39,10 +39,11 @@
           var id= $('#id').val();
           $.ajax({
                       type: 'POST',
-                      url : '<?php echo base_url('/GenBar/showw')?>',
+                      url : '<?php echo base_url('/Genbar/showw')?>',
                       data:  `id=${id}`,
                       beforeSend : function(msg){
-                      $('#showR').html('<h1><i class="fa fa-spin fa-refresh" /></h1>');
+                       $('#showR').html('<h1><i class="fa fa-spin fa-refresh" /></h1>');
+                  
                   },
                   success: function(msg){
                   $('#showR').html(msg);

@@ -4,8 +4,8 @@
 			$params['data'] = $id_karyawan;
 			$params['level'] = 'H';
 			$params['size'] = 4;
-			$params['savename'] = FCPATH."uploads/qr_image/".$id_karyawan.'code.png';
-            $this->ciqrcode->generate($params);
+      $params['savename'] = FCPATH."uploads/qr_image/".$id_karyawan.'code.png';
+            // $this->ciqrcode->generate($params);
 		 ?>
 
       <div id="print-area">
@@ -14,7 +14,8 @@
             <!-- Add the bg color to the header using any of the bg-* classes -->
             <div class="widget-user-header bg-blue">
               <div class="widget-user-image">
-                <img class="img-responsive" src="<?php echo base_url('uploads/qr_image/').$id_karyawan.'code.png';?>" />
+                <!-- <img class="img-responsive" src="<?php echo base_url('uploads/qr_image/').$id_karyawan.'code.png';?>" /> -->
+                <img class="img-responsive" src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=<?php echo $id_karyawan;?>" />
               </div>
               <!-- /.widget-user-image -->
               <h3 class="widget-user-username"><?php echo $id_karyawan?></h3>
